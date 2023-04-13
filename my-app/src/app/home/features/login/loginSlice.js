@@ -50,7 +50,7 @@ export const loginSlice = createSlice({
         builder
             //userLogin.pending是createAsyncThunk自动生产的actionType
             .addCase(userLogin.pending, (state) => {
-                state.alertState;
+                state.requestState.msg = '正在登录...';
             })
             .addCase(userLogin.fulfilled, (state, action) => {
             })

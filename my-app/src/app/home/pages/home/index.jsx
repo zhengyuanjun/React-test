@@ -3,20 +3,19 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import ChatTitle from "../../features/home/ChatTitle";
 import {Button, createTheme, ThemeProvider} from "@mui/material";
-import styles from './index.moduel.css';
+import styles from "./index.module.css";
 import Box from "@mui/material/Box";
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 function Home(){
     return (
-        <ThemeProvider theme={darkTheme}>
+        // <ThemeProvider theme={darkTheme}>
             <Grid container spacing={2}>
-
                 <Grid item xs={2}>
                     <Paper>
-                        <Box className={styles.menuBox}>
-                            <Button className={styles.newChatButton} variant="outlined">新建聊天</Button>
+                        <Box className={styles.menuBoxAddNewChat}>
+                            <Button className={styles.newChatButton} variant="outlined">新建聊天1</Button>
                         </Box>
-                        <Box>
+                        <Box className={styles.menuBoxChatTittle}>
                             <ChatTitle/>
                         </Box>
                     </Paper>
@@ -26,7 +25,7 @@ function Home(){
                     </Paper>
                 </Grid>
             </Grid>
-        </ThemeProvider>
+        // </ThemeProvider>
 
     );
 }
